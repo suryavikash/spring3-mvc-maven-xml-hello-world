@@ -74,11 +74,19 @@
 	</build>
 	
 <distributionManagement>
-    <repository>
-      <id>localnexusrepo</id>
-      <name>localnexusrepo</name>
-      <url>scp:http://ec2-3-82-161-10.compute-1.amazonaws.com:8081/repository/maven2</url>
-    </repository>
-  </distributionManagement>
+    <!-- Publish the versioned releases here -->
+ <repository>
+  <id>localnexusrepo</id>
+  <name>localnexusrepo nexus</name>
+  <url>dav:http://ec2-3-82-161-10.compute-1.amazonaws.com:8081/nexus/content/repositories/releases</url>
+ </repository>
+
+ <!-- Publish the versioned releases here -->
+ <snapshotRepository>
+  <id>localnexusrepo-nexus</id>
+  <name>localnexusrepo nexus</name>
+  <url>dav:http://ec2-3-82-161-10.compute-1.amazonaws.com:8081/nexus/content/repositories/snapshots</url>
+ </snapshotRepository>
+</distributionManagement>
 
 </project>
