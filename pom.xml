@@ -72,5 +72,13 @@
 			
 		</plugins>
 	</build>
+	
+<distributionManagement>
+    <repository>
+      <id>localnexusrepo</id>
+      <name>localnexusrepo</name>
+      <url>scp:http://ec2-3-82-161-10.compute-1.amazonaws.com:8081/repository/maven2</url>
+    </repository>
+  </distributionManagement>
 
 </project>
